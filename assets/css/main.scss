@@ -1,0 +1,35 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/*
+Some tweaks to the minimal mistakes css to improve (imho) text size, left menu spacing, and link hover behaviour
+*/
+
+.page__content {
+  font-size: 0.9em;
+}
+
+.toc__menu {
+  font-size: 0.75em;
+}
+
+.sidebar p, .sidebar li {
+  font-size: 0.8em;
+  line-height: 1.75;
+}
+
+.nav__list .nav__items a:hover{
+      text-decoration: underline;
+}
+  
+.social-icons a:hover{
+      text-decoration: none;
+}
+  
+

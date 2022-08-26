@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+{% comment %} link break added before searh results, to improve on-page search layout {% endcomment %}
+<style>
+  /* hide the top search icon, as its not compatible with having search embedded in a page
+  as per note in https://mmistakes.github.io/minimal-mistakes/docs/layouts/ */
+.search__toggle {
+  visibility: hidden;
+</style>
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+    {% endunless %}
+  <br>
+    {%- assign search_provider = site.search_provider | default: "lunr" -%}
+    {%- case search_provider -%}
+      {%- when "lunr" -%}
+        <input type="text" id="search" class="search-input" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'search documentation for ..' }}" />
+        <div id="results" class="results">
+        </div>
+      {%- when "google" -%}
+        <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+        <input type="text" id="cse-search-input-box-id" class="search-input" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'search documentation for ...' }}" />
+        </form>
+        <div id="results" class="results">
+          <gcse:searchresults-only></gcse:searchresults-only>
+        </div>
+      {%- when "algolia" -%}
+        <div class="search-searchbar"></div>
+        <div class="search-hits"></div>
+    {%- endcase -%}
+    
+     {{ content }}
+    
+  </div>
+</div>

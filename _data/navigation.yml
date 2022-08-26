@@ -1,0 +1,39 @@
+main:
+  - title: "Documentation home"
+    url: /
+  - title: "Getting started"
+    url: /getting-started/
+
+sidebar:
+  # - title: Getting started
+  #   children:
+  #     - title: "Getting started"
+  #       url: /getting-started/
+  # - title: Shared Contacts Help
+  #   children:
+  #     - title: "Manage contacts"
+  #       url: /contacts/
+  #     - title: "Manager users"
+  #       url: /users/
+  #     - title: "Manage custom fields"
+  #       url: /custom-fields/
+  #     - title: "Manage labels"
+  #       url: /labels/
+  #     - title: "Import contacts"
+  #       url: /import-contacts/
+  #     - title: "Export contacts"
+  #       url: /export-contacts/
+  #     - title: "Settings"
+  #       url: /settings/
+  # - title: More information
+  #   children:
+  #     - title: "Release log"
+  #       url: /release-log/
+  #     - title: "Shared contact FAQs"
+  #       url: /shared-contacts-faqs/
+  # - title: How to
+  #   children:
+  #     - title: "Import contacts from a file"
+  #       url: /import-file/
+  #     - title: "Mail merge to contacts"
+  #       url: /mail-merge/
