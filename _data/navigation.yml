@@ -10,7 +10,10 @@ sidebar:
     url: /front-end-development/
 
   - title: API documentation
-    url: /api-documentation/     
+    url: /api-documentation/
+
+  - title: API development
+    url: /api-development/  
   # - title: Shared Contacts Help
   #   children:
   #     - title: "Manage contacts"
