@@ -15,4 +15,4 @@ Please read this documentation carefully, Voyzu is based on a framework of compo
 
 I (Chris Lennon), the founder of Voyzu and creator of these patterns, am here to help you :-)  If anything is unclear please reach out to me at chris@voyzu.com
 
-If you find a mistake or something that is missing from this documentation, please head on over to the [github repository](https://github.com/voyzu-docs/dev/) that contains the source code for this site, and raise an issue (or a even a pull request if you are technically inclined)
+If you find a mistake or something that is missing from this documentation, please do let me know, this documentation is a resource for all of us
