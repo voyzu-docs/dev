@@ -16,15 +16,19 @@ Some tweaks to the minimal mistakes css to improve (imho) text size, left menu s
   font-size: 0.9em;
 }
 
+*/
+
+html {
+  font-size: 14px;
+}
 
 .toc__menu {
-  font-size: 1.2em;
+  font-size: 12px;
 }
 
 .sidebar p, .sidebar li {
-  font-size: 1.2em;
+  font-size: 18px;
 }
-*/
 
 .nav__list .nav__items a:hover{
       text-decoration: underline;
@@ -34,7 +38,3 @@ Some tweaks to the minimal mistakes css to improve (imho) text size, left menu s
       text-decoration: none;
 }
 
-html {
-  font-size: 14px;
-
-}
