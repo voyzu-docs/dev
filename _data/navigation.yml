@@ -5,10 +5,14 @@ main:
     url: /getting-started/
 
 sidebar:
-  # - title: Getting started
-  #   children:
-  #     - title: "Getting started"
-  #       url: /getting-started/
+
+  - title: Front end development
+    children:
+      - title: "Getting started"
+        url: /getting-started/
+
+  - title: API documentation
+    url: /getting-started/     
   # - title: Shared Contacts Help
   #   children:
   #     - title: "Manage contacts"
