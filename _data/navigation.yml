@@ -1,8 +1,8 @@
 main:
   - title: "Documentation home"
     url: /
-  - title: "Getting started"
-    url: /getting-started/
+  # - title: "Getting started"
+  #   url: /getting-started/
 
 sidebar:
 
