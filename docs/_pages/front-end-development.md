@@ -1,6 +1,6 @@
 ---
-permalink: /billing/
-title: "Billing Frequently Asked Questions"
+permalink: /front-end-development/
+title: "Front end development"
 layout: single
 sidebar:
   nav: "sidebar"

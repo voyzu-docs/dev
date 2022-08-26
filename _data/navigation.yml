@@ -8,11 +8,11 @@ sidebar:
 
   - title: Front end development
     children:
-      - title: "Getting started"
-        url: /getting-started/
+      - title: "Front end development"
+        url: /front-end-development/
 
   - title: API documentation
-    url: /getting-started/     
+    url: /api-documentation/     
   # - title: Shared Contacts Help
   #   children:
   #     - title: "Manage contacts"

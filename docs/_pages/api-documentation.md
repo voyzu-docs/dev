@@ -1,6 +1,6 @@
 ---
-permalink: /getting-started/
-title: "Getting started"
+permalink: /api-documentation/
+title: "API documentation"
 layout: single
 sidebar:
   nav: "sidebar"
