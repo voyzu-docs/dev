@@ -6,42 +6,27 @@ sidebar:
   nav: "sidebar"
 toc: true
 ---
-### Where can I view my account information?
+### Introduction
 
-Go to...
+lorem ipsum
 
-### Can I cancel?
+### Running the site on your development machine
 
-yes!
+lorem ipsum
 
-### Is it expensive?
+### Customizing navigation
 
-no, its pretty reasonable!!!
+lorem ipsum
 
-## Billing Frequently Asked Questions
+### All site elements must be web components
 
-### Where can I view my account information?
+lorem ipsum
 
-Go to...
+## Communicating between web components
 
-### Can I cancel?
+lorem ipsum
 
-yes!
+### Calling the voyzu CRM API
 
-### Is it expensive?
+lorem ipsum
 
-no, its pretty reasonable!!!
-
-## Billing Frequently Asked Questions
-
-### Where can I view my account information?
-
-Go to...
-
-### Can I cancel?
-
-yes!
-
-### Is it expensive?
-
-no, its pretty reasonable!!!

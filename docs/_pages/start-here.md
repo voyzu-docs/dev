@@ -9,7 +9,7 @@ toc: false
 ---
 ## Welcome
 <hr/>
-Welcome to the Voyzu Developer documentation site. 
+Welcome to the Voyzu Developer documentation site!
 
 Please read this documentation carefully, Voyzu is based on a framework of components and patterns designed to enable rapid, accurate development and to maintain a consistancy of the codebase.  Failing to apply the correct pattern or use the correct component will require re-work, even if all the desired functionality is achieved.
 
