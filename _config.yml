@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Voyzu developer documentation
 twitter_username: username
 github_username: username
-minimal_mistakes_skin: dirt
+minimal_mistakes_skin: contrast
 search: true
 search_full_content: true
 atom_feed: 
@@ -92,7 +92,7 @@ footer:
     #   url: "https://workspace.google.com/marketplace/app/voyzu_shared_contacts_manager/337624936001?pann=ogb"
     - label: "view on github"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/voyzu-docs/contacts"
+      url: "https://github.com/voyzu-docs/crm"
       
 defaults:
   # _posts
