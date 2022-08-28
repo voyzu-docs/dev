@@ -8,15 +8,15 @@ toc: true
 ---
 ### Overview
 
-Voyzu uses a template system, pages are written in HTML, CSS and Javascript.  At run time (i.e. when the browser navigates to the voyzu web application and requests a page) this template is read and served as a live web page.  What makes the voyzu front-end development system powerfull is that these template files are also designed to render on your local development machine - served by any web server capable of serving static content on your local machine (see section below on this).
+Voyzu uses a template system, pages are written in HTML, CSS and Javascript.  At run time (i.e. when the browser navigates to the voyzu web application and requests a page) this template is read and served as a live web page.  What makes the voyzu front-end development system powerful is that these template files are also designed to render on your local development machine - served by any web server capable of serving static content on your local machine (see section below on this).
 
 ### Plain JS only
 
-Voyzu web page templates, and web components are written using plain HTML, CSS and Javascript.  A framework (e.g. React, Angular etc) is not used.  There is no 'compile' step, so TypeScript is not used.  Simply write functionality using plain, vanilla Javascript :-)  Microsoft Internet Explorer is not supported, so modern Javascript (ES6) can be used.  The `/contacts/index.html` template page is fully complete and is a very useful resource to look at to see the various patterns in use.
+Voyzu web page templates, and web components are written using plain HTML, CSS and Javascript.  A framework (e.g. React, Angular etc) is not used.  There is no 'compile' step, so TypeScript is not used.  Simply write functionality using plain, vanilla Javascript :-)  Microsoft Internet Explorer is not supported, so modern Javascript (ES6) can be used.  The `/contacts/index.html` template page (referred to in this document as 'the contacts template') is fully complete and is a very useful resource to look at to see the various patterns in use.
 
 ### Running the site on your development machine
 
-To run the web application on your local machine first make sure python is installed on your machine.  Python is required to power the very simple local http server - nothing else.  Double click `server.cmd` - this will launch a simple http server, using the files in this folder as web pages.  Navigate to `http://localhost:8000/contacts/` - you should see the voyzu web application, with contacts displayed in a grid.  Note - this functionality has only been tested on Windows 10.
+To run the web application on your local machine first make sure python is installed on your machine.  Python is required to power the very simple local http server - nothing else.  Double click `server.cmd` - this will launch a simple http server, using the files in this folder as web pages.  Navigate to `http://localhost:8000/contacts/` - you should see the voyzu web application, with voyzu contacts displayed in a grid.  Note - this functionality has only been tested on Windows 10.
 
 The local web host structure follows the folder structure.  So a local URL like `http://localhost:8000/my-page/` can be expected to work if there is a folder named `my-page` sitting in the root directory, containing a page named `index.html`.  The data displayed on the site comes from data contained in a `mock.json` file and also from the Voyzu development server (see later sections on this).
 
@@ -28,7 +28,7 @@ Voyzu front end development uses [web components](https://developer.mozilla.org/
 
 ### Shared web components
 
-Web components that are shared accross the application are contained in the `/public/web-components` folder.  These can be used in the standard way:
+Web components that are shared across the application are contained in the `/public/web-components` folder.  These can be used in the standard way:
 - a script reference to the web component must be placed on your page. E.g. `<script type="text/javascript" src="/public/web-components/side-nav.js"></script>`
 - the web component tag must be used in your html page.  E.g. `<side-nav></side-nav>`
 - the component must be registered. E.g. `customElements.define('side-nav', SideNav)`
@@ -49,7 +49,7 @@ The `<side-nav>` web component holds the site navigation.  You can control which
 
 #### top-nav
 
-The `<top-nav>` web component displays the top most navigation bar.  It is configured dynamically by pageData values.  This component can also be rendered server side, which is the reason for the  type comments, and the reason also that the component does not use any DOM manipulation
+The `<top-nav>` web component displays the top most navigation bar.  It is configured dynamically by pageData values.  This component can also be rendered server side, which is the reason for the {% raw %}{{{% endraw %} type comments (these are replaced dynamically when rendered by the Voyzu server), and the reason also that the component does not use any DOM manipulation
 
 ### Communicating between web components
 
@@ -61,7 +61,7 @@ In general method one - raising a custom event is preferred as this communicatio
 
 ### Calling the voyzu CRM API
 
-As with any web client / server application Voyzu makes calls to an API, hosted by Voyzu, to retrieve and update data.  Template pageData includes a `baseUrl` value, which is the base server address that voyzu uses to communicate with.  Combine this value with the relivant API path to obtain the URL to call.  See [api-documentation](/api-documentation/) for a full list of URLs to call, as well as more information on communicating with the voyzu CRM API.
+As with any web client / server application Voyzu makes calls to an API, hosted by Voyzu, to retrieve and update data.  Template pageData includes a `baseUrl` value, which is the base server address that voyzu uses to communicate with.  Combine this value with the relevant API path to obtain the URL to call.  See [api-documentation](/api-documentation/) for a full list of URLs to call, as well as more information on communicating with the voyzu CRM API.
 
 To make API calls use the voyzu utility `FetchHelepr`, which is contained in `/public/js/fetch-helper.js`.  This class contains a `post(...)` method which returns a `FetchHelperResponse` object.  See the contacts template for examples of how to use FetchHelper
 
@@ -74,12 +74,12 @@ Some API calls start other, longer running processes.  For example deleting a co
 Initiate RequestPoller as follows:
 
 ````
-                let requestPollerUrl = pageData.baseUrl + '/api/request-status/get/{requestId}'
-                if (pageData.voyzuSessionId) {
-                    requestPollerUrl += '?voyzu-session-id=' + pageData.voyzuSessionId
-                }
+let requestPollerUrl = pageData.baseUrl + '/api/request-status/get/{requestId}'
+if (pageData.voyzuSessionId) {
+	requestPollerUrl += '?voyzu-session-id=' + pageData.voyzuSessionId
+}
 
-                const requestPoller = new RequestPoller(requestPollerUrl)
+const requestPoller = new RequestPoller(requestPollerUrl)
 ````
 
 Then attach methods to the `onFail` and `onProcessed` and optionally the `onTick` events.  All these events will pass a `RequestStatus` item, which you can use to display progress to the user, and to notify the user of process completion.  An example RequestStatus item is below

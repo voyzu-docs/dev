@@ -8,6 +8,9 @@ sidebar:
 
   - title: Front end development
     url: /front-end-development/
+    children:
+    - title: "Front end development"
+      url: /front-end-development/
 
   - title: API documentation
     url: /api-documentation/
