@@ -7,10 +7,12 @@ main:
 sidebar:
 
   - title: Front end development
-    url: /front-end-development/
+    # url: /front-end-development/
     children:
-    - title: "Front end development"
+    - title: "Template development"
       url: /front-end-development/
+    - title: "Server side rendering"
+      url: /server-side-rendering/
 
   - title: API documentation
     url: /api-documentation/
