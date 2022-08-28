@@ -35,19 +35,19 @@ Web components that are shared accross the application are contained in the `/pu
 
 A list of shared web components, with a brief description of each follows:
 
-#### `app-alert`
+#### app-alert
 
 Placing the `<app-alert target-id="page-alert"></app-alert>` web component tag allows you to to call the `AppAlert.ShowAlert(...)` method to show a themed alert in the position the app-alert tag appears.  Multiple alerts (e.g. a page alert and an alert on a modal pop-up) are supported by specifying a different `id` property on the app-alert tag, and supplying this id value to the `AppAlert.ShowAlert(...)` method.
 
-#### `help-panel`
+#### help-panel
 
 Placing the `<help-panel></help-panel>` web component tag on a page allows you to display help on a sliding side bar.  The help content displayed is the content of the `<template id="help-content-template">` element.  This component listens for the `show-help-checkbox` custom event, which is emitted by the top-nav web component.
 
-#### `side-nav`
+#### side-nav
 
 The `<side-nav>` web component holds the site navigation.  You can control which menu item and sub-menu item is displayed as active by passing page data to the page - as `activeMenuItem` and `activeSubMenuItem`.  This component can also be rendered server side, which is the reason for the `// {{` type comments, and the reason also that the component does not use any DOM manipulation
 
-#### `top-nav`
+#### top-nav
 
 The `<top-nav>` web component displays the top most navigation bar.  It is configured dynamically by pageData values.  This component can also be rendered server side, which is the reason for the `// {{` type comments, and the reason also that the component does not use any DOM manipulation
 
