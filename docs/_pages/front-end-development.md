@@ -28,4 +28,9 @@ Voyzu front end development uses [web components](https://developer.mozilla.org/
 
 ### Shared web components
 
-not lorum
+Web components that are shared accross the application are contained in the `/public/web-components` folder.  These can be used in the standard way:
+- a script reference to the web component must be placed on your page. E.g. `<script type="text/javascript" src="/public/web-components/side-nav.js"></script>`
+- the web component tag must be used in your html page.  E.g. `<side-nav></side-nav>`
+- the component must be registered. E.g. `customElements.define('side-nav', SideNav)`
+
+A list of shared web components, with a brief description of each follows:
