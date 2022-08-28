@@ -84,7 +84,7 @@ Initiate RequestPoller as follows:
 
 Then attach methods to the `onFail` and `onProcessed` and optionally the `onTick` events.  All these events will pass a `RequestStatus` item, which you can use to display progress to the user, and to notify the user of process completion.  An example RequestStatus item is below
 
-`
+```
 {
     "RequestId": "XkbeRjJDoAMEVrw=",
     "Commentary": "Workflow complete",
@@ -93,7 +93,7 @@ Then attach methods to the `onFail` and `onProcessed` and optionally the `onTick
     "CreatedDate": "2022-08-28T10:12:31.530Z",
     "UpdatedDate": "2022-08-28T10:12:41.599Z"
 }
-`
+```
 
 To see an example of the RequestPoller in use see the `connectedCallback` method of the `ActionBar` web component.  
 
