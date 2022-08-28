@@ -72,3 +72,29 @@ All voyzu API calls use classes to send and receive information.  This class ser
 Some API calls start other, longer running processes.  For example deleting a contact will delete the Voyzu contact and return a response.  In the background a process will also be kicked off which will delete the contact from Google contacts for all users participating in replication.  Other API calls may not be able to be completed within 30 seconds (the AWS API Gateway limit) and so need to be fulfilled asynchronously.  In both cases you can poll these asynchronous requests by making use of `RequestPoller` utility (`/public/js/request-poller.js`).  
 
 Initiate RequestPoller as follows:
+
+`
+                let requestPollerUrl = pageData.baseUrl + '/api/request-status/get/{requestId}'
+                if (pageData.voyzuSessionId) {
+                    requestPollerUrl += '?voyzu-session-id=' + pageData.voyzuSessionId
+                }
+
+                const requestPoller = new RequestPoller(requestPollerUrl)
+`
+
+Then attach methods to the `onFail` and `onProcessed` and optionally the `onTick` events.  All these events will pass a `RequestStatus` item, which you can use to display progress to the user, and to notify the user of process completion.  An example RequestStatus item is below
+
+`
+{
+    "RequestId": "XkbeRjJDoAMEVrw=",
+    "Commentary": "Workflow complete",
+    "PercentComplete": 100,
+    "ProcessStatus": "PROCESSED",
+    "CreatedDate": "2022-08-28T10:12:31.530Z",
+    "UpdatedDate": "2022-08-28T10:12:41.599Z"
+}
+`
+
+To see an example of the RequestPoller in use see the `connectedCallback` method of the `ActionBar` web component.  
+
+
