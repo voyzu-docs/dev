@@ -51,7 +51,7 @@ The `<side-nav>` web component holds the site navigation.  You can control which
 
 The `<top-nav>` web component displays the top most navigation bar.  It is configured dynamically by pageData values.  This component can also be rendered server side, which is the reason for the `// {{` type comments, and the reason also that the component does not use any DOM manipulation
 
-## Communicating between web components
+### Communicating between web components
 
 When one web component needs to receive input from a separate web component, or needs to display data on an other web component, then there are two ways to achieve this.
 1. Web Component A raises a custom event, Web Component B listens for this event, and takes action when the event is received
