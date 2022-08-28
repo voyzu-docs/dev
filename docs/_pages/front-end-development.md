@@ -73,14 +73,14 @@ Some API calls start other, longer running processes.  For example deleting a co
 
 Initiate RequestPoller as follows:
 
-`
+````
                 let requestPollerUrl = pageData.baseUrl + '/api/request-status/get/{requestId}'
                 if (pageData.voyzuSessionId) {
                     requestPollerUrl += '?voyzu-session-id=' + pageData.voyzuSessionId
                 }
 
                 const requestPoller = new RequestPoller(requestPollerUrl)
-`
+````
 
 Then attach methods to the `onFail` and `onProcessed` and optionally the `onTick` events.  All these events will pass a `RequestStatus` item, which you can use to display progress to the user, and to notify the user of process completion.  An example RequestStatus item is below
 
