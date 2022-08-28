@@ -26,9 +26,15 @@ html {
   font-size: 12px;
 }
 
-.sidebar p, .sidebar li {
+// .sidebar p, .sidebar li {
+//   font-size: 18px;
+// }
+
+.nav__items > li {
   font-size: 18px;
 }
+
+
 
 .nav__list .nav__items a:hover{
       text-decoration: underline;
