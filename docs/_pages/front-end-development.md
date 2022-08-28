@@ -45,7 +45,7 @@ Placing the `<help-panel></help-panel>` web component tag on a page allows you t
 
 #### side-nav
 
-The `<side-nav>` web component holds the site navigation.  You can control which menu item and sub-menu item is displayed as active by passing page data to the page - as `activeMenuItem` and `activeSubMenuItem`.  This component can also be rendered server side, which is the reason for the \{{ type comments (these are replaced dynamically when rendered by the Voyzu server), and the reason also that the component does not use any DOM manipulation
+The `<side-nav>` web component holds the site navigation.  You can control which menu item and sub-menu item is displayed as active by passing page data to the page - as `activeMenuItem` and `activeSubMenuItem`.  This component can also be rendered server side, which is the reason for the {% raw %}{{{% endraw %} type comments (these are replaced dynamically when rendered by the Voyzu server), and the reason also that the component does not use any DOM manipulation
 
 #### top-nav
 
