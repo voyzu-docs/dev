@@ -24,6 +24,9 @@ search: true
 search_full_content: true
 atom_feed: 
   hide: true
+  
+head_scripts:
+  - /assets/js/auth.js
 
 # Build settings
 markdown: kramdown
