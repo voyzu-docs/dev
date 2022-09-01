@@ -1,1 +1,1 @@
-window.alert ('auth')
+window.location = "https://voyzu.com"
